@@ -2,6 +2,10 @@
 data/
 *.zip
 
+dataset/
+*.csv
+*npz
+
 # Generated predictions
 submissions/*.csv
 

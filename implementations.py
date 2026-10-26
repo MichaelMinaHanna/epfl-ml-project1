@@ -181,7 +181,6 @@ def calculate_loss(y, tx, w):
     assert y.shape[0] == tx.shape[0]
     assert tx.shape[1] == w.shape[0]
 
-    ### SOLUTION
     z = tx @ w
     return np.mean(np.logaddexp(0, z) - y * z)
 
@@ -200,9 +199,10 @@ def logistic_regression(y, tx, initial_w, max_iters, gamma):
         w: Final model parameters of shape (D,).
         loss: Negative log-likelihood at the final parameters.
     """
+    
     w = initial_w.copy()
     for _ in range(max_iters):
-        gradient = tx.T @ (sigmoid(tx @ w) - y) / len(y)
+        gradient = tx.T @ (sigmoid(tx @ w) - y) / float(len(y))
         w = w - gamma * gradient
     loss = calculate_loss(y, tx, w)
     return w, loss
@@ -228,7 +228,7 @@ def reg_logistic_regression(y, tx, lambda_, initial_w, max_iters, gamma):
     """
     w = initial_w.copy()
     for _ in range(max_iters):
-        gradient = tx.T @ (sigmoid(tx @ w) - y) / len(y) + 2 * lambda_ * w
+        gradient = tx.T @ (sigmoid(tx @ w) - y) / float(len(y)) + 2 * lambda_ * w
         w = w - gamma * gradient
     loss = calculate_loss(y, tx, w)
     return w, loss

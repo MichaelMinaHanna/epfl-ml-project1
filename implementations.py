@@ -158,8 +158,8 @@ def sigmoid(t):
     >>> sigmoid(np.array([0.1, 0.1]))
     array([0.52497919, 0.52497919])
     """
-    return 1.0 / (1 + np.exp(-t))
-
+    t = np.asarray(t)
+    return np.exp(-np.logaddexp(0, -t))
 
 def calculate_loss(y, tx, w):
     """compute the cost by negative log likelihood.

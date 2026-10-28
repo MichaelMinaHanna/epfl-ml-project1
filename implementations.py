@@ -161,6 +161,7 @@ def sigmoid(t):
     t = np.asarray(t)
     return np.exp(-np.logaddexp(0, -t))
 
+
 def calculate_loss(y, tx, w):
     """compute the cost by negative log likelihood.
 
@@ -199,7 +200,7 @@ def logistic_regression(y, tx, initial_w, max_iters, gamma):
         w: Final model parameters of shape (D,).
         loss: Negative log-likelihood at the final parameters.
     """
-    
+
     w = initial_w.copy()
     for _ in range(max_iters):
         gradient = tx.T @ (sigmoid(tx @ w) - y) / float(len(y))

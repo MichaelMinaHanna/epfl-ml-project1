@@ -6,7 +6,7 @@ Binary classification project for predicting cardiovascular disease risk.
 
 - Michael Hanna
 - Tarek Hamad
-- Rex
+- Rex Baseden
 
 ## Environment
 

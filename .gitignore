@@ -4,7 +4,7 @@ data/
 
 dataset/
 *.csv
-*npz
+*.npz
 
 # Generated predictions
 submissions/*.csv

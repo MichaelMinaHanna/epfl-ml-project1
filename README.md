@@ -16,15 +16,18 @@ For an Apple Silicon Mac:environment-macos-arm64.yml
 
 ## Dataset
 
-Contins the provided CSV files under:
+Contains the provided CSV files under:
 
     data/dataset/
 
 The dataset is local and is not tracked by Git.
 
+
 ## Main files
 
 - `implementations.py`: ml functions implementations
 - `run.py`: reproduces the final predictions
+- `explore.ipynb`: file meant to experiment whith our model 
+- `plot.ipynb`: file meant to plot our result
 - `helpers.py`: provided file ( loading and submission)
-- `report/`: LaTeX report
+- `report/report.tex`: LaTeX report
